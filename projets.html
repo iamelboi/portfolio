@@ -1,71 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head> 
+<head>
     <meta charset="UTF-8">
-	<title>📚  Portfolio - Projets</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="projets.css">
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Portfolio - Projets - Luc HAUWEL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
+<body class="min-vh-100" style="background-color: #FAF8F5;">
 
-  <body> 
-
-	<nav class="menu-vertical">
-		<h1>Luc.h</h1>
-		<p><a class="nav" href="index.html"> 🏠 Accueil</a></p>
-		<p><a class="nav" href="projets.html"> 📚 Projets</a></p>
-		<p><a class="nav" href="competences.html"> 💻 Compétences</a></p>
-		<p><a class="nav" href="experiences.html"> 🧑‍💼 Expérience</a></p>
-
-		<a href="documents/CV_HAUWEL_LUC.pdf" download class="nav">📄 Mon CV</a>
-	</nav>
-
-    <h1 class="titre"> Mes Projets </h1>
-
-    <div class="universitaire">
-        <h2> Projet Universitaire : Gobblet ! </h2>
-        
-        <img src="images/screenshot_gobblet.png" class="illustration"/>
-        <h4> Description </h4>
-        <p> J’ai eu l’occasion cette année de réaliser en équipe de 3 en .net MAUI une application qui reproduisait le jeu de société GOBBLET. Je me suis occupé de coder différentes classes en C et de designer ainsi que de coder différentes vues de l’application. J’ai également été chargé de coder des évènements ainsi que de faire le binding entre le plateau de jeu et le code, et j’ai ensuite épauler mes équipiers lorsqu’ils avaient besoin de moi. J’ai apporté à mon équipe une base solide sur laquelle s’appuyer pour réaliser ensuite l’application. Ce projet m’a permis de développer mon esprit d’équipe tout en affinant mes compétences techniques dans le développement d'application et dans l'optimisation de code en .net MAUI. </p>
-
-        <h4> Technologies </h4>
-        <div class="badges">
-            <span class="badge">.NET MAUI</span>
-            <span class="badge">C#</span>
-            <span class="badge">XAML</span>
-            <span class="badge">GIT</span>
+    <!-- NAVBAR MOBILE (affichée uniquement sur petits écrans < lg) -->
+    <nav class="navbar navbar-dark d-lg-none sticky-top px-3 shadow-sm" style="background-color: #102C26;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="color: #F7E7CE;">Luc.h</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse mt-3" id="menuNavbar">
+                <ul class="navbar-nav gap-2 mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold px-3 rounded-3" href="projets.html" style="background-color: #F7E7CE; color: #102C26;">📚 Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="competences.html" style="color: #F7E7CE;">💻 Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="experiences.html" style="color: #F7E7CE;">🧑‍💼 Expérience</a>
+                    </li>
+                </ul>
+                <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+            </div>
         </div>
-      
-        <div class="lien-code">
-          <a href="https://github.com/iamelboi/Univ-Gobblet" target="_blank" class="bouton-source">
-            📂 Voir le code source sur GitHub
-          </a>
+    </nav>
+
+    <!-- STRUCTURE PRINCIPALE (GRILLE BOOTSTRAP) -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- SIDEBAR DESKTOP (Fixe à gauche sur écran large) -->
+            <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column justify-content-between sticky-top vh-100 p-4 shadow" style="background-color: #102C26;">
+                <div>
+                    <!-- Logo / Identité -->
+                    <div class="text-center pb-4 mb-4 border-bottom border-light border-opacity-25">
+                        <h2 class="h3 fw-bold mb-1" style="color: #F7E7CE;">Luc.h</h2>
+                        <small class="text-white-50">Développeur Informatique</small>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="nav nav-pills flex-column gap-2">
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                        <a class="nav-link fw-bold px-3 py-2 rounded-3 shadow-sm" href="projets.html" style="background-color: #F7E7CE; color: #102C26;">📚 Projets</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="competences.html" style="color: #F7E7CE;">💻 Compétences</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="experiences.html" style="color: #F7E7CE;">🧑‍💼 Expérience</a>
+                    </nav>
+                </div>
+
+                <!-- Bouton Téléchargement CV -->
+                <div class="pt-3 border-top border-light border-opacity-25">
+                    <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2 shadow-sm rounded-3" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+                </div>
+            </aside>
+
+            <!-- CONTENU PRINCIPAL DES PROJETS -->
+            <main class="col-12 col-lg-9 col-xl-10 px-4 px-md-5 py-5">
+
+                <!-- EN-TÊTE DE LA PAGE -->
+                <header class="mb-5 pb-2">
+                    <span class="badge rounded-pill px-3 py-2 mb-2 fw-semibold border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                        Portfolio & Réalisations
+                    </span>
+                    <h1 class="display-5 fw-bold mb-2" style="color: #102C26;">Mes Projets</h1>
+                    <div class="rounded-pill" style="width: 60px; height: 4px; background-color: #F7E7CE;"></div>
+                </header>
+
+                <div class="d-flex flex-column gap-5">
+
+                    <!-- PROJET 1 : GOBBLET ! -->
+                    <article class="card border-0 shadow-sm rounded-4 p-4 p-md-5" style="background-color: #FFFFFF;">
+                        
+                        <!-- Entête du projet -->
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 pb-3 border-bottom">
+                            <div>
+                                <span class="badge rounded-pill px-3 py-2 fw-semibold mb-2" style="background-color: #F7E7CE; color: #102C26;">Projet Universitaire</span>
+                                <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Gobblet !</h2>
+                            </div>
+                        </div>
+
+                        <!-- Ligne Image + Contenu -->
+                        <div class="row g-4 align-items-start">
+                            <!-- Capture d'écran -->
+                            <div class="col-12 col-lg-5">
+                                <img src="images/screenshot_gobblet.png" alt="Capture d'écran du jeu Gobblet" class="img-fluid rounded-4 shadow-sm border border-2 w-100" style="border-color: #F7E7CE; object-fit: cover;">
+                            </div>
+
+                            <!-- Texte & Détails -->
+                            <div class="col-12 col-lg-7">
+                                <h3 class="h5 fw-bold mb-2" style="color: #102C26;">Description</h3>
+                                <p class="text-secondary mb-4" style="line-height: 1.7;">
+                                    J’ai eu l’occasion durant ma première année de BUT de réaliser en équipe de 3 en .NET MAUI une application qui reproduisait le jeu de société GOBBLET. Je me suis occupé de coder différentes classes en C et de designer ainsi que de coder différentes vues de l’application. J’ai également été chargé de coder des évènements ainsi que de faire le binding entre le plateau de jeu et le code, et j’ai ensuite épaulé mes équipiers lorsqu’ils avaient besoin de moi. J’ai apporté à mon équipe une base solide sur laquelle s’appuyer pour réaliser ensuite l’application. Ce projet m’a permis de développer mon esprit d’équipe tout en affinant mes compétences techniques dans le développement d'application et dans l'optimisation de code en .NET MAUI.
+                                </p>
+
+                                <h3 class="h6 fw-bold mb-2" style="color: #102C26;">Technologies utilisées</h3>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">.NET MAUI</span>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">C#</span>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">XAML</span>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">GIT</span>
+                                </div>
+
+                                <div>
+                                    <a href="https://github.com/iamelboi/Univ-Gobblet" target="_blank" class="btn px-4 py-2 fw-semibold rounded-pill shadow-sm" style="background-color: #102C26; color: #F7E7CE;">
+                                        📂 Voir le code source sur GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJET 2 : MENESTAI -->
+                    <article class="card border-0 shadow-sm rounded-4 p-4 p-md-5" style="background-color: #FFFFFF;">
+                        
+                        <!-- Entête du projet -->
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 pb-3 border-bottom">
+                            <div>
+                                <span class="badge rounded-pill px-3 py-2 fw-semibold mb-2" style="background-color: #F7E7CE; color: #102C26;">Projet Personnel</span>
+                                <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Menestai</h2>
+                            </div>
+                        </div>
+
+                        <!-- Description & Captures -->
+                        <div class="row g-4">
+                            
+                            <!-- Colonne Captures (2 images côte à côte ou empilées selon écran) -->
+                            <div class="col-12 col-lg-6">
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6 col-lg-12">
+                                        <img src="images/screenshot_menestai.png" alt="Capture d'écran Menestai 1" class="img-fluid rounded-4 shadow-sm border border-2 w-100" style="border-color: #F7E7CE; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-12">
+                                        <img src="images/screenshot_menestai2.png" alt="Capture d'écran Menestai 2" class="img-fluid rounded-4 shadow-sm border border-2 w-100" style="border-color: #F7E7CE; object-fit: cover;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Colonne Détails -->
+                            <div class="col-12 col-lg-6">
+                                <h3 class="h5 fw-bold mb-2" style="color: #102C26;">Description</h3>
+                                <p class="text-secondary mb-4" style="line-height: 1.7;">
+                                    Depuis la classe de Première, je développe en autonomie un add-on Minecraft en JavaScript destiné à une communauté. L’objectif est de proposer une plateforme de mini-jeux disponibles à tout moment, directement intégrés au jeu. Ce projet m’a permis de découvrir le monde du développement dès le lycée. Aujourd’hui encore, je le maintiens activement en y ajoutant des fonctionnalités selon les retours des joueurs. Ce projet m’a permis de développer mon autonomie ainsi que ma capacité à répondre à des besoins réels.
+                                </p>
+
+                                <h3 class="h6 fw-bold mb-2" style="color: #102C26;">Technologies utilisées</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">JavaScript</span>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">JSON</span>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #F7E7CE; color: #102C26;">GIT</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </main>
         </div>
-    
     </div>
 
-
-
-    <div class="perso"> 
-        <h2> Projet Personnel : Menestai </h2>
-        <img src="images/screenshot_menestai.png" class="illustration"/>
-        <img src="images/screenshot_menestai2.png" class="illustration"/>
-
-        <h4>Description</h4>
-        <p>
-        Depuis la classe de Première, je développe en autonomie un add-on Minecraft en JavaScript destiné à une communauté. L’objectif est de proposer une plateforme de mini-jeux disponibles à tout moment, directement intégrés au jeu. Ce projet m’a permis de découvrir le monde du développement dès le lycée. Aujourd’hui encore, je le maintiens activement en y ajoutant des fonctionnalités selon les retours des joueurs. Ce projet m’a permis de développer mon autonomie ainsi que ma capacité à répondre à des besoins réels.
-        </p>
-
-        <h4>Technologies</h4>
-        <div class="badges">
-            <span class="badge">JavaScript</span>
-            <span class="badge">JSON</span>
-            <span class="badge">GIT</span>
-        </div>
-
-    </div>
-
-
-  </body>
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

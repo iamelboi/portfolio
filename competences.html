@@ -2,68 +2,206 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>💻 Portfolio - Compétences</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="competences.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Portfolio - Compétences - Luc HAUWEL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="min-vh-100" style="background-color: #FAF8F5;">
 
-    <nav class="menu-vertical">
-        <h1>Luc.h</h1>
-        <p><a class="nav" href="index.html"> 🏠 Accueil</a></p>
-        <p><a class="nav" href="projets.html"> 📚 Projets</a></p>
-        <p><a class="nav" href="competences.html"> 💻 Compétences</a></p>
-        <p><a class="nav" href="experiences.html"> 🧑‍💼 Expérience</a></p>
-        <a href="documents/CV_HAUWEL_LUC.pdf" download class="nav">📄 Mon CV</a>
+    <!-- NAVBAR MOBILE (affichée uniquement sur petits écrans < lg) -->
+    <nav class="navbar navbar-dark d-lg-none sticky-top px-3 shadow-sm" style="background-color: #102C26;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="color: #F7E7CE;">Luc.h</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse mt-3" id="menuNavbar">
+                <ul class="navbar-nav gap-2 mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="projets.html" style="color: #F7E7CE;">📚 Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold px-3 rounded-3" href="competences.html" style="background-color: #F7E7CE; color: #102C26;">💻 Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="experiences.html" style="color: #F7E7CE;">🧑‍💼 Expérience</a>
+                    </li>
+                </ul>
+                <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+            </div>
+        </div>
     </nav>
 
-    <h1 class="titre">Mes Compétences</h1>
+    <!-- STRUCTURE PRINCIPALE (GRILLE BOOTSTRAP) -->
+    <div class="container-fluid">
+        <div class="row">
 
-    <div class="informatique">
-        <h2>Compétences en informatique</h2>
-        <div class="grid">
-            <div class="bloc">
-                <h4>Développement Front-End</h4>
-                <img src="images/front_end.jpg" height="20%" width="10%"/>
-                <p>Le développement Front-End consiste à créer des interfaces esthétiques et intuitives pour les utilisateurs. J’utilise pour cela <b>HTML</b>, <b>CSS</b> et <b>XAML</b>.</p>
-            </div>
-            <div class="bloc">
-                <h4>Développement Back-End</h4>
-                <img src="images/back_end.jpg" height="20%" width="10%"/>
+            <!-- SIDEBAR DESKTOP (Fixe à gauche sur grand écran) -->
+            <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column justify-content-between sticky-top vh-100 p-4 shadow" style="background-color: #102C26;">
+                <div>
+                    <!-- Logo / Identité -->
+                    <div class="text-center pb-4 mb-4 border-bottom border-light border-opacity-25">
+                        <h2 class="h3 fw-bold mb-1" style="color: #F7E7CE;">Luc.h</h2>
+                        <small class="text-white-50">Développeur Informatique</small>
+                    </div>
 
-                <p>Le développement Back-End se concentre sur la logique métier de l’application. J’ai utilisé principalement le langage <b>C</b> ainsi que le <b>PHP</b>.</p>
-            </div>
-            <div class="bloc">
-                <h4>Programmation Orientée Objet</h4>
-                <img src="images/oop.png" height="20%" width="10%"/>
-                <p>La programmation orientée objet permet de structurer le code autour d’objets ayant des propriétés et des comportements définis. J’ai pu l’expérimenter notamment en <b>C++</b> ou en <b>C#</b>.</p>
-            </div>
-            <div class="bloc">
-                <h4>Design d’interface</h4>
-                <img src="images/design.jpg" height="20%" width="10%"/>
-                <p>Le design d’interface vise à concevoir des interfaces claires, ergonomiques et agréables à utiliser. C’est une compétence que je développe régulièrement à travers mes projets.</p>
-            </div>
+                    <!-- Navigation -->
+                    <nav class="nav nav-pills flex-column gap-2">
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="projets.html" style="color: #F7E7CE;">📚 Projets</a>
+                        <a class="nav-link fw-bold px-3 py-2 rounded-3 shadow-sm" href="competences.html" style="background-color: #F7E7CE; color: #102C26;">💻 Compétences</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="experiences.html" style="color: #F7E7CE;">🧑‍💼 Expérience</a>
+                    </nav>
+                </div>
+
+                <!-- Bouton Téléchargement CV -->
+                <div class="pt-3 border-top border-light border-opacity-25">
+                    <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2 shadow-sm rounded-3" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+                </div>
+            </aside>
+
+            <!-- CONTENU PRINCIPAL -->
+            <main class="col-12 col-lg-9 col-xl-10 px-4 px-md-5 py-5">
+
+                <!-- EN-TÊTE DE LA PAGE -->
+                <header class="mb-5 pb-2">
+                    <span class="badge rounded-pill px-3 py-2 mb-2 fw-semibold border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                        Savoir-faire & Savoir-être
+                    </span>
+                    <h1 class="display-5 fw-bold mb-2" style="color: #102C26;">Mes Compétences</h1>
+                    <div class="rounded-pill" style="width: 60px; height: 4px; background-color: #F7E7CE;"></div>
+                </header>
+
+                <!-- SECTION 1 : GRAND BLOC COMPÉTENCES EN INFORMATIQUE -->
+                <section class="card border border-2 rounded-4 p-4 p-md-5 mb-5 shadow-sm" style="border-color: #102C26; background-color: #FFFFFF;">
+                    
+                    <!-- Titre de section avec ligne de séparation -->
+                    <div class="border-bottom border-2 pb-3 mb-4" style="border-color: #102C26;">
+                        <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Compétences en informatique</h2>
+                    </div>
+
+                    <!-- Grille des sous-blocs -->
+                    <div class="row g-4">
+                        
+                        <!-- Bloc Front-End -->
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="rounded-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3 p-2 border" style="width: 75px; height: 75px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/front_end.jpg" alt="Front-End" class="img-fluid rounded" style="max-height: 48px; object-fit: contain;">
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Développement Front-End</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Le développement Front-End consiste à créer des interfaces esthétiques et intuitives pour les utilisateurs. J’utilise pour cela <b>HTML</b>, <b>CSS</b> et <b>XAML</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Back-End -->
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="rounded-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3 p-2 border" style="width: 75px; height: 75px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/back_end.jpg" alt="Back-End" class="img-fluid rounded" style="max-height: 48px; object-fit: contain;">
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Développement Back-End</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Le développement Back-End se concentre sur la logique métier de l’application. J’ai utilisé principalement le langage <b>C</b> ainsi que le <b>PHP</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc POO -->
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="rounded-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3 p-2 border" style="width: 75px; height: 75px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/oop.png" alt="POO" class="img-fluid rounded" style="max-height: 48px; object-fit: contain;">
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Programmation Orientée Objet</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    La programmation orientée objet permet de structurer le code autour d’objets ayant des propriétés et des comportements définis. J’ai pu l’expérimenter notamment en <b>C++</b> ou en <b>C#</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Design d'interface -->
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="rounded-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3 p-2 border" style="width: 75px; height: 75px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/design.jpg" alt="Design d'interface" class="img-fluid rounded" style="max-height: 48px; object-fit: contain;">
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Design d’interface</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Le design d’interface vise à concevoir des interfaces claires, ergonomiques et agréables à utiliser. C’est une compétence que je développe régulièrement à travers mes projets.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- SECTION 2 : GRAND BLOC COMPÉTENCES HUMAINES -->
+                <section class="card border border-2 rounded-4 p-4 p-md-5 mb-5 shadow-sm" style="border-color: #102C26; background-color: #FFFFFF;">
+                    
+                    <!-- Titre de section avec ligne de séparation -->
+                    <div class="border-bottom border-2 pb-3 mb-4" style="border-color: #102C26;">
+                        <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Compétences humaines</h2>
+                    </div>
+
+                    <!-- Grille des sous-blocs -->
+                    <div class="row g-4">
+                        
+                        <!-- Bloc Dynamique -->
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="badge rounded-pill px-3 py-2 mb-3 fw-semibold align-self-center border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                    Énergie & Engagement
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Dynamique</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Je m’investis toujours avec énergie dans les projets, ce qui me permet de motiver les personnes avec qui je travaille et de maintenir une dynamique collective positive.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Autonome -->
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="badge rounded-pill px-3 py-2 mb-3 fw-semibold align-self-center border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                    Rigueur & Initiative
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Autonome</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Je suis capable de m’organiser et de travailler seul tout en respectant les objectifs fixés, comme en témoigne mon projet personnel Menestai développé sur la durée.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Organisé -->
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="badge rounded-pill px-3 py-2 mb-3 fw-semibold align-self-center border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                    Méthode & Clarté
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">Organisé</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Je planifie mes tâches de manière structurée pour optimiser mon efficacité, notamment dans le cadre de projets en équipe ou lors de développements modulaires.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
         </div>
     </div>
 
-    <div class="humaines">
-        <h2>Compétences humaines</h2>
-        <div class="grid">
-            <div class="bloc">
-                <h4>Dynamique</h4>
-                <p>Je m’investis toujours avec énergie dans les projets, ce qui me permet de motiver les personnes avec qui je travaille.</p>
-            </div>
-            <div class="bloc">
-                <h4>Autonome</h4>
-                <p>Je suis capable de m’organiser et de travailler seul tout en respectant les objectifs fixés, comme en témoigne mon projet personnel Menestai.</p>
-            </div>
-            <div class="bloc">
-                <h4>Organisé</h4>
-                <p>Je planifie mes tâches de manière structurée pour optimiser mon efficacité, notamment dans le cadre de projets en équipe ou individuels.</p>
-            </div>
-        </div>
-    </div>
-
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

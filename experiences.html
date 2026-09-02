@@ -1,74 +1,196 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>🧑‍💼 Portfolio - Expérience</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="experiences.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧑‍💼 Portfolio - Expérience - Luc HAUWEL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-  <body>
-    <nav class="menu-vertical">
-      <h1>Luc.h</h1>
-      <p><a class="nav" href="index.html"> 🏠 Accueil</a></p>
-      <p><a class="nav" href="projets.html"> 📚 Projets</a></p>
-      <p><a class="nav" href="competences.html"> 💻 Compétences</a></p>
-      <p><a class="nav" href="experiences.html"> 🧑‍💼 Expérience</a></p>
-      <a href="documents/CV_HAUWEL_LUC.pdf" download class="nav"> 📄 Mon CV</a>
+<body class="min-vh-100" style="background-color: #FAF8F5;">
+
+    <!-- NAVBAR MOBILE (affichée uniquement sur petits écrans < lg) -->
+    <nav class="navbar navbar-dark d-lg-none sticky-top px-3 shadow-sm" style="background-color: #102C26;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="color: #F7E7CE;">Luc.h</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse mt-3" id="menuNavbar">
+                <ul class="navbar-nav gap-2 mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="projets.html" style="color: #F7E7CE;">📚 Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="competences.html" style="color: #F7E7CE;">💻 Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold px-3 rounded-3" href="experiences.html" style="background-color: #F7E7CE; color: #102C26;">🧑‍💼 Expérience</a>
+                    </li>
+                </ul>
+                <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+            </div>
+        </div>
     </nav>
 
-    <h1 class="titre">Mes Expériences</h1>
+    <!-- STRUCTURE PRINCIPALE (GRILLE BOOTSTRAP) -->
+    <div class="container-fluid">
+        <div class="row">
 
-    <div class="parcours">
-      <h4 class="sous-titre">Mon Parcours Scolaire</h4>
+            <!-- SIDEBAR DESKTOP (Fixe à gauche sur grand écran) -->
+            <aside class="col-lg-3 col-xl-2 d-none d-lg-flex flex-column justify-content-between sticky-top vh-100 p-4 shadow" style="background-color: #102C26;">
+                <div>
+                    <!-- Logo / Identité -->
+                    <div class="text-center pb-4 mb-4 border-bottom border-light border-opacity-25">
+                        <h2 class="h3 fw-bold mb-1" style="color: #F7E7CE;">Luc.h</h2>
+                        <small class="text-white-50">Développeur Informatique</small>
+                    </div>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2024 - Aujourd'hui</div>
-          <div class="timeline-content">
-            <h3>Etudes supérieures</h3>
-            <img src="images/etudes_sup.jpg" height="5%" width="5%"/>
-            <p>Les Etudes supérieures correspondent à la partie actuelle de ma vie. En effet, je suis actuellement en deuxième année de BUT Informatique à l'<strong>IUT des Cézaux à Clermont-Ferrand</strong></p>
-          </div>
+                    <!-- Navigation -->
+                    <nav class="nav nav-pills flex-column gap-2">
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="index.html" style="color: #F7E7CE;">🏠 Accueil</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="projets.html" style="color: #F7E7CE;">📚 Projets</a>
+                        <a class="nav-link fw-medium px-3 py-2 rounded-3" href="competences.html" style="color: #F7E7CE;">💻 Compétences</a>
+                        <a class="nav-link fw-bold px-3 py-2 rounded-3 shadow-sm" href="experiences.html" style="background-color: #F7E7CE; color: #102C26;">🧑‍💼 Expérience</a>
+                    </nav>
+                </div>
+
+                <!-- Bouton Téléchargement CV -->
+                <div class="pt-3 border-top border-light border-opacity-25">
+                    <a href="documents/CV_HAUWEL_LUC.pdf" download class="btn w-100 fw-bold py-2 shadow-sm rounded-3" style="background-color: #F7E7CE; color: #102C26;">📄 Mon CV</a>
+                </div>
+            </aside>
+
+            <!-- CONTENU PRINCIPAL -->
+            <main class="col-12 col-lg-9 col-xl-10 px-4 px-md-5 py-5">
+
+                <!-- EN-TÊTE DE LA PAGE -->
+                <header class="mb-5 pb-2">
+                    <span class="badge rounded-pill px-3 py-2 mb-2 fw-semibold border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                        Évolution & Parcours
+                    </span>
+                    <h1 class="display-5 fw-bold mb-2" style="color: #102C26;">Mes Expériences</h1>
+                    <div class="rounded-pill" style="width: 60px; height: 4px; background-color: #F7E7CE;"></div>
+                </header>
+
+                <!-- SECTION 1 : GRAND BLOC PARCOURS SCOLAIRE (TIMELINE BOOTSTRAP) -->
+                <section class="card border border-2 rounded-4 p-4 p-md-5 mb-5 shadow-sm" style="border-color: #102C26; background-color: #FFFFFF;">
+                    
+                    <div class="border-bottom border-2 pb-3 mb-5" style="border-color: #102C26;">
+                        <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Mon Parcours Scolaire</h2>
+                    </div>
+
+                    <!-- Ligne verticale de la timeline via la bordure Bootstrap -->
+                    <div class="border-start border-4 ps-3 ps-md-4 ms-2 ms-md-4 d-flex flex-column gap-4" style="border-color: #102C26;">
+
+                        <!-- Étape 1 : Enseignement supérieur -->
+                        <div class="card border border-2 rounded-4 p-4 shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                                <div>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold border mb-2" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                        2024 - Aujourd'hui
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0" style="color: #102C26;">Études supérieures</h3>
+                                </div>
+                                <div class="rounded-3 p-2 border d-inline-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/etudes_sup.jpg" alt="Études supérieures" class="img-fluid rounded" style="max-height: 42px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                Les Études supérieures correspondent à la partie actuelle de ma vie. En effet, je suis actuellement en deuxième année de BUT Informatique à l'<strong>IUT des Cézaux à Clermont-Ferrand</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Étape 2 : Lycée -->
+                        <div class="card border border-2 rounded-4 p-4 shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                                <div>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold border mb-2" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                        2020 - 2023
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0" style="color: #102C26;">Lycée</h3>
+                                </div>
+                                <div class="rounded-3 p-2 border d-inline-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/lycee.png" alt="Lycée" class="img-fluid rounded" style="max-height: 42px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                Mon lycée s'est déroulé dans le même établissement, au lycée <strong>Claude et Pierre Virlogeux</strong> à <strong>Riom</strong> où j'ai obtenu mon bac maths physique avec mention bien accompagné de deux options.
+                            </p>
+                        </div>
+
+                        <!-- Étape 3 : Collège -->
+                        <div class="card border border-2 rounded-4 p-4 shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                                <div>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold border mb-2" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                        2016 - 2020
+                                    </span>
+                                    <h3 class="h5 fw-bold mb-0" style="color: #102C26;">Collège</h3>
+                                </div>
+                                <div class="rounded-3 p-2 border d-inline-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background-color: #F7E7CE; border-color: #102C26;">
+                                    <img src="images/college.png" alt="Collège" class="img-fluid rounded" style="max-height: 42px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <p class="text-secondary small mb-2" style="line-height: 1.6;">
+                                J'ai d'abord passé ma 6e dans le collège <strong>Champclaux</strong> à <strong>Châtel-Guyon</strong>.
+                            </p>
+                            <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                Puis j'ai fini cette étape de ma vie dans le collège <strong>Michel de l'Hospital</strong> situé à <strong>Riom</strong> où j'ai obtenu mon Brevet des Collèges avec la mention Très Bien.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- SECTION 2 : GRAND BLOC EXPÉRIENCES PROFESSIONNELLES -->
+                <section class="card border border-2 rounded-4 p-4 p-md-5 mb-5 shadow-sm" style="border-color: #102C26; background-color: #FFFFFF;">
+                    
+                    <div class="border-bottom border-2 pb-3 mb-4" style="border-color: #102C26;">
+                        <h2 class="h3 fw-bold mb-0" style="color: #102C26;">Mes Expériences Professionnelles</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        
+                        <!-- Bloc Castration de maïs -->
+                        <div class="col-12 col-md-6">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="badge rounded-pill px-3 py-2 mb-3 fw-semibold align-self-center border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                    Été 2023 · Sardon (63)
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">🌽 Castration de maïs</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Travail manuel en extérieur durant l’été, développant rigueur, persévérance et endurance face aux conditions agricoles exigeantes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Stage en cabinet d'avocat -->
+                        <div class="col-12 col-md-6">
+                            <div class="card h-100 border border-2 rounded-4 p-4 text-center shadow-sm" style="border-color: #102C26; background-color: #FAF8F5;">
+                                <div class="badge rounded-pill px-3 py-2 mb-3 fw-semibold align-self-center border" style="background-color: #F7E7CE; color: #102C26; border-color: #102C26;">
+                                    2021 · Clermont-Ferrand (63)
+                                </div>
+                                <h3 class="h5 fw-bold mb-3" style="color: #102C26;">⚖️ Stage en cabinet d'avocat</h3>
+                                <p class="card-text text-secondary small mb-0" style="line-height: 1.6;">
+                                    Découverte du monde juridique, observation d'audiences au tribunal, gestion de tâches administratives et organisation du classement de dossiers confidentiels.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2020 - 2023</div>
-          <div class="timeline-content">
-            <h3>Lycée</h3>
-            <img src="images/lycee.png" height="15%" width="15%"/>
-            <p>Mon lycée s'est déroulé dans le même établissement, au lycée <strong> Claude et Pierre Virlogeux </strong> à <strong> Riom </strong> ou j'ai obtenu mon bac maths physique avec mention bien accompagné de deux options</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2016 - 2020</div>
-          <div class="timeline-content">
-            <h3>Collège</h3>
-            <img src="images/college.png" height="10%" width="10%"/>
-            <p>J'ai d'abords passé ma 6e dans le collège <strong>Champclaux</strong> à <strong> Chatel-Guyon </strong> </p>
-            <p>Puis j'ai fini cette étape de ma vie dans le collège <strong>Michel de l'Hospital</strong> situé à <strong>Riom</strong> où j'ai obtenu mon Brevet des Collèges avec la mention Très Bien </p>
-          </div>
-        </div>
-
-        
-      </div>
     </div>
 
-    <div class="professionnelles">
-      <h4 class="sous-titre">Mes Expériences Professionnelles</h4>
-
-      <div class="blocs">
-        <div>
-          <h3>🌽 Castration de maïs – 2023</h3>
-          <p>Sardon (63) – Travail manuel en extérieur durant l’été, rigueur et endurance face aux conditions agricoles.</p>
-        </div>
-
-        <div>
-          <h3>⚖️ Stage en cabinet d'avocat – 2021</h3>
-          <p>Clermont-Ferrand (63) – Découverte du monde juridique, observation d'audiences, tâches administratives et classement de dossiers.</p>
-        </div>
-      </div>
-    </div>
-  </body>
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
